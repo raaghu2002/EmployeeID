@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Employee Dashboard</h1>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="location.href='add.html'">Add Employee</button>
+            </div>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input type="number" id="searchId" placeholder="Enter Employee ID" class="search-input">
+                <button onclick="searchEmployee()" class="btn btn-search">Search</button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="employee-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Date of Birth</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>QR Code</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTable">
+                </tbody>
+            </table>
+            <div id="noResults" class="no-results hidden">No employee found with this ID.</div>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
